@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <div class="header">Merry Christmas!</div>
-<div class="header">Click the calendar to get a Christmas quote</div> 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Christmas Calendar</title>
@@ -12,6 +10,13 @@
       text-align: center;
       margin: 20px;
       background-color: #f5f5f5; /* Light gray background */
+    }
+
+    .header {
+      margin-bottom: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #d9534f; /* Red color for the header */
     }
 
     .calendar {
@@ -67,6 +72,9 @@
 </head>
 <body>
 
+<div class="header">Merry Christmas!</div>
+<div class="header">Click the calendar to get a Christmas quote</div>
+
 <div class="calendar" id="calendar"></div>
 <div id="quote-container"></div>
 
@@ -74,12 +82,32 @@
   const calendarContainer = document.getElementById('calendar');
   const quoteContainer = document.getElementById('quote-container');
 
-  // Sample quotes for each day
+  // Quotes for each day
   const quotes = [
-    "May your days be merry and bright.",
-    "Good tidings we bring to you and your kin.",
-    "Deck the halls with boughs of holly.",
-    // Add more quotes for each day
+    "May your heart be light and your days be merry.",
+    "Wishing you a season of joy and laughter.",
+    "Let the magic of Christmas fill your heart with warmth and love.",
+    "May your home be filled with the joy of the season.",
+    "Warmest thoughts and best wishes for a wonderful Christmas.",
+    "Wishing you peace, love, and joy this holiday season.",
+    "May the spirit of Christmas be with you throughout the year.",
+    "Sending you holiday cheer and a happy new year!",
+    "May your days be filled with love, laughter, and good company.",
+    "Wishing you a bright and festive holiday season.",
+    "May your Christmas sparkle with moments of love, laughter, and goodwill.",
+    "Sending warm wishes for a joyous Christmas and a happy new year.",
+    "May your home be filled with the joy of family and friends this Christmas.",
+    "Wishing you a season of blessings and a new year filled with hope and happiness.",
+    "May the magic of Christmas bring you peace, love, and joy.",
+    "Warmest wishes for a wonderful Christmas and a happy new year.",
+    "May your days be merry and bright, and may all your Christmases be white.",
+    "Wishing you a holiday season filled with warmth, love, and laughter.",
+    "May your heart be filled with the joy of the season.",
+    "Sending you the spirit of love, joy, and giving this Christmas.",
+    "Wishing you a magical and memorable Christmas celebration.",
+    "May your Christmas be filled with moments of love, laughter, and goodwill.",
+    "Wishing you a season of joy, a tree trimmed with love, and a new year filled with blessings.",
+    "May your holiday season be merry and bright, and your new year filled with hope and happiness."
   ];
 
   for (let i = 1; i <= 24; i++) {
