@@ -38,28 +38,45 @@
       background-color: #f0f0f0;
       border: 1px solid #999;
     }
+
+    #quote-container {
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
 
-<div class="calendar" id="calendar">
-</div>
+<div class="calendar" id="calendar"></div>
+<div id="quote-container"></div>
 
 <script>
   const calendarContainer = document.getElementById('calendar');
+  const quoteContainer = document.getElementById('quote-container');
+
+  // Sample quotes for each day
+  const quotes = [
+    "May your days be merry and bright.",
+    "Good tidings we bring to you and your kin.",
+    "Deck the halls with boughs of holly.",
+    // Add more quotes for each day
+  ];
 
   for (let i = 1; i <= 24; i++) {
     const day = document.createElement('div');
     day.className = 'day';
     day.textContent = i;
-    day.onclick = () => openDoor(i);
+    day.onclick = () => showQuote(i);
     calendarContainer.appendChild(day);
   }
 
-  function openDoor(day) {
-    const door = document.querySelector('.calendar .day:nth-child(' + day + ')');
-    door.classList.add('opened');
-    // You can add additional logic here, such as showing a special message or image for each day
+  function showQuote(day) {
+    const quote = quotes[day - 1]; // Adjust for zero-based array index
+    quoteContainer.textContent = `Day ${day} Quote: ${quote}`;
+    
+    // Optionally, you can also clear the quote after a few seconds
+    setTimeout(() => {
+      quoteContainer.textContent = '';
+    }, 5000);
   }
 </script>
 
