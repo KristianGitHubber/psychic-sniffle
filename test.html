@@ -42,13 +42,12 @@
 </head>
 <body>
 
-<div class="calendar">
-  <!-- Days are generated dynamically with JavaScript -->
+<div class="calendar" id="calendar">
 </div>
 
 <script>
-  // Dynamically generate the calendar days
-  const calendarContainer = document.querySelector('.calendar');
+  const calendarContainer = document.getElementById('calendar');
+
   for (let i = 1; i <= 24; i++) {
     const day = document.createElement('div');
     day.className = 'day';
