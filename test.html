@@ -43,15 +43,22 @@
 <body>
 
 <div class="calendar">
-  <!-- You can use PHP or JavaScript to dynamically generate the calendar boxes -->
-  <?php for ($i = 1; $i <= 24; $i++) { ?>
-    <div class="day" onclick="openDoor(<?php echo $i; ?>)"><?php echo $i; ?></div>
-  <?php } ?>
+  <!-- Days are generated dynamically with JavaScript -->
 </div>
 
 <script>
+  // Dynamically generate the calendar days
+  const calendarContainer = document.querySelector('.calendar');
+  for (let i = 1; i <= 24; i++) {
+    const day = document.createElement('div');
+    day.className = 'day';
+    day.textContent = i;
+    day.onclick = () => openDoor(i);
+    calendarContainer.appendChild(day);
+  }
+
   function openDoor(day) {
-    var door = document.querySelector('.calendar .day:nth-child(' + day + ')');
+    const door = document.querySelector('.calendar .day:nth-child(' + day + ')');
     door.classList.add('opened');
     // You can add additional logic here, such as showing a special message or image for each day
   }
