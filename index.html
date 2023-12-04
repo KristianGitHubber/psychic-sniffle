@@ -9,6 +9,7 @@
       font-family: 'Arial', sans-serif;
       text-align: center;
       margin: 20px;
+      background-color: #f5f5f5; /* Light gray background */
     }
 
     .calendar {
@@ -22,25 +23,43 @@
     .day {
       width: 100%;
       height: 60px;
-      background-color: #e0e0e0;
-      border: 1px solid #ccc;
+      background-color: #d9534f; /* Red background */
+      border: 1px solid #882222; /* Dark red border */
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
+      color: #fff; /* White text color */
+      font-size: 18px;
+      font-weight: bold;
+      transition: background-color 0.3s;
     }
 
     .day:hover {
-      background-color: #d1d1d1;
+      background-color: #c9302c; /* Darker red on hover */
     }
 
     .day.opened {
-      background-color: #f0f0f0;
-      border: 1px solid #999;
+      background-color: #5bc0de; /* Blue background for opened days */
+      border: 1px solid #2a96a5; /* Dark blue border */
     }
 
     #quote-container {
       margin-top: 20px;
+      font-size: 16px;
+      color: #333; /* Dark text color */
+    }
+
+    /* Christmas tree background pattern */
+    body:before {
+      content: '';
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: url('https://source.unsplash.com/900x900/?christmas') repeat; /* Change the URL to your preferred Christmas-themed image */
+      opacity: 0.1; /* Adjust the opacity as needed */
+      pointer-events: none;
+      z-index: -1;
     }
   </style>
 </head>
